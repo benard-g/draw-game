@@ -1,11 +1,11 @@
-import React from 'react';
+import React, { FC, useEffect, useState } from 'react';
 import { Helmet, HelmetProvider } from 'react-helmet-async';
 import { useTranslation } from 'react-i18next';
 
 import { initI18n } from './i18next';
 import Routes from './Routes';
 
-const AppReady: React.FC = () => {
+const AppReady: FC = () => {
   const { i18n, t } = useTranslation();
 
   return (
@@ -19,14 +19,14 @@ const AppReady: React.FC = () => {
   );
 };
 
-const AppNotReady: React.FC = () => {
+const AppNotReady: FC = () => {
   return <p>Loading...</p>;
 };
 
-const App: React.FC = () => {
-  const [i18nReady, setI18nReady] = React.useState<boolean>(false);
+const App: FC = () => {
+  const [i18nReady, setI18nReady] = useState<boolean>(false);
 
-  React.useEffect(() => {
+  useEffect(() => {
     (async () => {
       await initI18n();
       setI18nReady(true);

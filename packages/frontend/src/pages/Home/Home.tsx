@@ -1,9 +1,9 @@
-import React from 'react';
+import React, { FC } from 'react';
 import { useTranslation } from 'react-i18next';
 
 import NavBar from '../../components/NavBar';
 
-const Home: React.FC = () => {
+const Home: FC = () => {
   const { t } = useTranslation();
 
   return (

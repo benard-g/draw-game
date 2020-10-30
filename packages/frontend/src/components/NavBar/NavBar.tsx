@@ -1,8 +1,8 @@
-import React from 'react';
+import React, { FC } from 'react';
 import { useTranslation } from 'react-i18next';
 import { Link } from 'react-router-dom';
 
-const NavBar: React.FC = () => {
+const NavBar: FC = () => {
   const { t } = useTranslation();
 
   return (
