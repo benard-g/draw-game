@@ -1,12 +1,15 @@
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 import { Link } from 'react-router-dom';
 
 const NavBar: React.FC = () => {
+  const { t } = useTranslation();
+
   return (
     <div>
       <ul>
         <li>
-          - <Link to="/">Home</Link>
+          - <Link to="/">{t('components.NavBar.linkHome')}</Link>
           <br />
         </li>
       </ul>

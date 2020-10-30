@@ -1,0 +1,17 @@
+{
+  "App": {
+    "head": {
+      "title": ""
+    }
+  },
+  "components": {
+    "NavBar": {
+      "linkHome": ""
+    }
+  },
+  "pages": {
+    "Home": {
+      "title": ""
+    }
+  }
+}
