@@ -1,0 +1,25 @@
+{
+  "name": "draw-game",
+  "private": true,
+  "license": "MIT",
+  "scripts": {
+    "build": "wsrun -at build",
+    "build:clean": "wsrun -a build:clean",
+    "test": "wsrun -a test"
+  },
+  "workspaces": {
+    "packages": [
+      "packages/*"
+    ],
+    "nohoist": [
+      "@packages/*",
+      "eslint",
+      "jest",
+      "react-scripts",
+      "typescript"
+    ]
+  },
+  "devDependencies": {
+    "wsrun": "^5.2.4"
+  }
+}
