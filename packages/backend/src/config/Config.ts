@@ -2,14 +2,12 @@ import { getFromEnv, getNumberFromEnv } from '../utils/envUtils';
 
 export interface Config {
   NODE_ENV: 'production' | 'test' | 'development';
-
   PORT: number;
 }
 
 export function loadConfig(): Config {
   return {
     NODE_ENV: getNodeEnv(),
-
     PORT: getNumberFromEnv('PORT', 8080),
   };
 }
