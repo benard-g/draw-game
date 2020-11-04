@@ -111,3 +111,4 @@ build/
 
 # MISC
 .DS_Store
+translation_old.json

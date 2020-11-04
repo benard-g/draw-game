@@ -3,4 +3,5 @@ module.exports = {
     browser: true,
     jest: true,
   },
+  plugins: ['only-warn'],
 };
