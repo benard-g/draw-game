@@ -7,6 +7,9 @@
     "build:clean": "wsrun -a build:clean",
     "test": "wsrun -a test"
   },
+  "engines": {
+    "node": "v14.15.0"
+  },
   "workspaces": {
     "packages": [
       "packages/*"
