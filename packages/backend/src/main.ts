@@ -14,6 +14,7 @@ async function main(): Promise<void> {
   console.log(`Server started on port "${port}"`);
 }
 
+/* istanbul ignore next */
 if (require.main === module) {
   main().catch((err) => {
     // eslint-disable-next-line no-console
