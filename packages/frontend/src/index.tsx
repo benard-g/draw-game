@@ -1,5 +1,5 @@
 import 'reset-css';
-import './css/global.css';
+import './styles/global.css';
 
 import React from 'react';
 import ReactDOM from 'react-dom';

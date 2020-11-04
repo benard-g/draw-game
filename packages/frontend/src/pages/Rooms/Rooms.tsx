@@ -4,19 +4,19 @@ import { useTranslation } from 'react-i18next';
 
 import PageLayout from '../../components/layout/PageLayout';
 
-const Home: FC = () => {
+const Rooms: FC = () => {
   const { t } = useTranslation();
 
   return (
     <>
       <Helmet>
-        <title>{t('pages.Home.head.title')}</title>
+        <title>{t('pages.Rooms.head.title')}</title>
       </Helmet>
       <PageLayout>
-        <h1>{t('pages.Home.title')}</h1>
+        <h1>{t('pages.Rooms.title')}</h1>
       </PageLayout>
     </>
   );
 };
 
-export default Home;
+export default Rooms;

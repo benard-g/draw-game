@@ -2,6 +2,10 @@ import React, { FC, useEffect, useState } from 'react';
 import { Helmet, HelmetProvider } from 'react-helmet-async';
 import { useTranslation } from 'react-i18next';
 
+import CenterContainer from '../components/layout/CenterContainer';
+import LoadingWheel from '../components/loaders/LoadingWheel';
+import { ApplicationThemeProvider } from '../hooks/ApplicationTheme';
+import { AppWrapper } from './App.styles';
 import { initI18n } from './i18next';
 import Routes from './Routes';
 
@@ -20,7 +24,11 @@ const AppReady: FC = () => {
 };
 
 const AppNotReady: FC = () => {
-  return <p>Loading...</p>;
+  return (
+    <CenterContainer>
+      <LoadingWheel size={48} />
+    </CenterContainer>
+  );
 };
 
 const App: FC = () => {
@@ -35,7 +43,9 @@ const App: FC = () => {
 
   return (
     <HelmetProvider>
-      {i18nReady ? <AppReady /> : <AppNotReady />}
+      <ApplicationThemeProvider defaultTheme="blue">
+        <AppWrapper>{i18nReady ? <AppReady /> : <AppNotReady />}</AppWrapper>
+      </ApplicationThemeProvider>
     </HelmetProvider>
   );
 };

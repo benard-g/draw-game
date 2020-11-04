@@ -25,6 +25,7 @@
     "react-i18next": "^11.7.3",
     "react-router-dom": "^5.2.0",
     "reset-css": "^5.0.1",
+    "styled-components": "^5.2.1",
     "web-vitals": "^0.2.4"
   },
   "devDependencies": {
@@ -36,9 +37,11 @@
     "@types/react": "^16.9.53",
     "@types/react-dom": "^16.9.8",
     "@types/react-router-dom": "^5.1.6",
+    "@types/styled-components": "^5.1.4",
     "@typescript-eslint/eslint-plugin": "^4.6.0",
     "@typescript-eslint/parser": "^4.6.0",
     "eslint-config-prettier": "^6.15.0",
+    "eslint-plugin-only-warn": "^1.0.2",
     "eslint-plugin-prettier": "^3.1.4",
     "eslint-plugin-simple-import-sort": "^5.0.3",
     "i18next-parser": "^3.3.0",
