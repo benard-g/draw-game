@@ -1,0 +1,27 @@
+{
+  "App": {
+    "head": {
+      "title": "Draw game !"
+    }
+  },
+  "components": {
+    "NavBar": {
+      "linkRooms": "Créer un salon",
+      "title": "Draw game"
+    }
+  },
+  "pages": {
+    "Home": {
+      "head": {
+        "title": "Draw game !"
+      },
+      "title": "Page d'accueil !"
+    },
+    "Rooms": {
+      "head": {
+        "title": "Draw game - Salons"
+      },
+      "title": "Page de salons !"
+    }
+  }
+}

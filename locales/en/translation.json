@@ -1,0 +1,27 @@
+{
+  "App": {
+    "head": {
+      "title": "Draw game !"
+    }
+  },
+  "components": {
+    "NavBar": {
+      "linkRooms": "Create a room",
+      "title": "Draw game"
+    }
+  },
+  "pages": {
+    "Home": {
+      "head": {
+        "title": "Draw game !"
+      },
+      "title": "Home page"
+    },
+    "Rooms": {
+      "head": {
+        "title": "Draw game - Rooms !"
+      },
+      "title": "Rooms page"
+    }
+  }
+}
