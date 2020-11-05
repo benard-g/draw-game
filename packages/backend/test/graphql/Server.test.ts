@@ -19,7 +19,6 @@ jest.mock('apollo-server', () => ({
   })),
 }));
 
-import { promises } from 'dns';
 import { Server } from '../../src/graphql/Server';
 
 describe('graphql/Server', () => {
