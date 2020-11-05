@@ -9,6 +9,7 @@
     "test": "yarn test:lint && yarn test:jest",
     "test:lint": "eslint --max-warnings=0 'src/**/*.{js,jsx,ts,tsx}'",
     "test:jest": "react-scripts test --runInBand --coverage --watchAll=false",
+    "graphql:codegen": "graphql-codegen --config codegen.yaml",
     "i18n:update": "i18next 'src/**/*.{js,jsx,ts,tsx}'",
     "eject": "react-scripts eject"
   },
@@ -16,6 +17,8 @@
     "node": "v14.15.0"
   },
   "dependencies": {
+    "@apollo/client": "^3.2.5",
+    "graphql": "^15.4.0",
     "i18next": "^19.8.3",
     "i18next-browser-languagedetector": "^6.0.1",
     "i18next-http-backend": "^1.0.21",
@@ -29,6 +32,10 @@
     "web-vitals": "^0.2.4"
   },
   "devDependencies": {
+    "@graphql-codegen/cli": "1.19.1",
+    "@graphql-codegen/typescript": "1.17.11",
+    "@graphql-codegen/typescript-operations": "1.17.9",
+    "@graphql-codegen/typescript-react-apollo": "2.1.0",
     "@testing-library/jest-dom": "^5.11.4",
     "@testing-library/react": "^11.1.0",
     "@testing-library/user-event": "^12.1.10",
@@ -52,7 +59,8 @@
   },
   "jest": {
     "coveragePathIgnorePatterns": [
-      "index.tsx"
+      "index.tsx",
+      "generated.tsx"
     ]
   },
   "browserslist": {

@@ -1,3 +1,4 @@
+import { ApolloProvider } from '@apollo/client';
 import React, { FC, useEffect, useState } from 'react';
 import { Helmet, HelmetProvider } from 'react-helmet-async';
 import { useTranslation } from 'react-i18next';
@@ -5,8 +6,9 @@ import { useTranslation } from 'react-i18next';
 import CenterContainer from '../components/layout/CenterContainer';
 import LoadingWheel from '../components/loaders/LoadingWheel';
 import { ApplicationThemeProvider } from '../hooks/ApplicationTheme';
+import { graphqlClient } from '../services/graphql/graphqlClient';
+import { initI18n } from '../services/i18n/i18n';
 import { AppWrapper } from './App.styles';
-import { initI18n } from './i18next';
 import Routes from './Routes';
 
 const AppReady: FC = () => {
@@ -44,7 +46,9 @@ const App: FC = () => {
   return (
     <HelmetProvider>
       <ApplicationThemeProvider defaultTheme="blue">
-        <AppWrapper>{i18nReady ? <AppReady /> : <AppNotReady />}</AppWrapper>
+        <ApolloProvider client={graphqlClient}>
+          <AppWrapper>{i18nReady ? <AppReady /> : <AppNotReady />}</AppWrapper>
+        </ApolloProvider>
       </ApplicationThemeProvider>
     </HelmetProvider>
   );
