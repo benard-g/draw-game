@@ -1,0 +1,2 @@
+(this["webpackJsonp@packages/frontend"]=this["webpackJsonp@packages/frontend"]||[]).push([[3],{120:function(e,t,n){"use strict";n.r(t),n.d(t,"default",(function(){return i}));var c=n(3),s=(n(2),n(35)),a=n(118),r=n(76),i=function(){var e=Object(a.a)().t;return Object(c.jsxs)(c.Fragment,{children:[Object(c.jsx)(s.a,{children:Object(c.jsx)("title",{children:e("pages.Rooms.head.title")})}),Object(c.jsx)(r.a,{children:Object(c.jsx)("h1",{children:e("pages.Rooms.title")})})]})}}}]);
+//# sourceMappingURL=3.1c01136e.chunk.js.map
