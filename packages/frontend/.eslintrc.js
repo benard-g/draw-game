@@ -4,4 +4,5 @@ module.exports = {
     jest: true,
   },
   plugins: ['only-warn'],
+  ignorePatterns: ['src/services/graphql/generated.tsx'],
 };
