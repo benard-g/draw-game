@@ -2,13 +2,14 @@ import 'source-map-support/register';
 import 'reflect-metadata';
 
 import { loadConfig } from './config/Config';
-import { createGraphqlServer } from './graphql/createGraphqlServer';
+import { Server } from './graphql/Server';
 
 async function main(): Promise<void> {
   const config = loadConfig();
-  const server = await createGraphqlServer(config);
 
-  const { port } = await server.listen(config.PORT);
+  const server = new Server();
+  await server.init(config.NODE_ENV === 'development');
+  const { port } = await server.start(config.PORT);
 
   // eslint-disable-next-line no-console
   console.log(`Server started on port "${port}"`);
